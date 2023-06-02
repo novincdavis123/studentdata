@@ -13,7 +13,7 @@ class _RegpageState extends State<Regpage> {
   List photos = [];
   Future<void> fetchdata() async {
     final response = await http.get(Uri.parse(
-        'https://llabdemo.orell.com/api/masters/anonymous/getAcademicYear/32'),headers: {"Access-Control-Allow-Origin":"*"});
+        'https://llabdemo.orell.com/api/masters/anonymous/getAcademicYear/32'));
     final data = json.decode(response.body);
     setState(() {
       photos = data;
